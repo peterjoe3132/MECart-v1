@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-import BuyPage from './Components/BuyPage/BuyPage.js';
-import SellPage from './Components/SellPage/SellPage.js'
-
-
+import  BuyPage from "./Components/BuyPage/BuyPage.js";
+import SellPage from "./Components/SellPage/SellPage.js"
 
 
 class App extends Component {
@@ -26,6 +23,8 @@ class App extends Component {
     );
   }
 }
+
+
 
 
 export default App;
