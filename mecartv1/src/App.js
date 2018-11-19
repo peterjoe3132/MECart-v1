@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import BuyPage from './Components/BuyPage/BuyPage.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import BuyPage from './Components/BuyPage/BuyPage.js';
+import SellPage from './Components/SellPage/SellPage.js'
+
 
 
 
@@ -17,7 +20,7 @@ class App extends Component {
           </p>
         </header>
         <Route path="/buy" component={BuyPage} />
-        <Route path="/sell" component={Sellpage} />
+        <Route path="/sell" component={SellPage} />
       </div>
       </Router>
     );
@@ -25,16 +28,4 @@ class App extends Component {
 }
 
 
-class Sellpage extends Component {
-  render() {
-    return (<div className="Sell" >
-    <header className="sell-header">
-      <p>
-      SELL PAGE
-      </p>
-    </header>
-  </div>
-    );
-  }
-}
 export default App;
