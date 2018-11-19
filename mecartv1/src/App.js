@@ -2,11 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+<<<<<<< HEAD
 const item1={
   "productname":"abc",
   "imgsrc":"https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjC4ry_3ODeAhVLp48KHR2oCI0QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbeauty%2F&psig=AOvVaw3pwm-2yFnCfljIAqQdSWJR&ust=1542726040477644",
   "price":"2000"
 }
+=======
+import BuyPage from './Components/BuyPage/BuyPage.js';
+import SellPage from './Components/SellPage/SellPage.js'
+
+
+
+>>>>>>> afa8a5a157bb761532b01a060a93af0d4eaf2d15
 
 class App extends Component {
   render() {
@@ -19,14 +27,15 @@ class App extends Component {
           <Link to="/sell"><button >SELL</button></Link>
           </p>
         </header>
-        <Route path="/buy" component={Buypage} />
-        <Route path="/sell" component={Sellpage} />
+        <Route path="/buy" component={BuyPage} />
+        <Route path="/sell" component={SellPage} />
       </div>
       </Router>
     );
   }
 }
 
+<<<<<<< HEAD
 class Buypage extends Component {
  
   render() {
@@ -72,4 +81,7 @@ class Item extends Component {
     );
   }
 }
+=======
+
+>>>>>>> afa8a5a157bb761532b01a060a93af0d4eaf2d15
 export default App;
