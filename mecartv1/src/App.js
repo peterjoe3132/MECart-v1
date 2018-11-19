@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-
+const item1={
+  "productname":"abc",
+  "imgsrc":"https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjC4ry_3ODeAhVLp48KHR2oCI0QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbeauty%2F&psig=AOvVaw3pwm-2yFnCfljIAqQdSWJR&ust=1542726040477644",
+  "price":"2000"
+}
 
 class App extends Component {
   render() {
@@ -24,6 +28,7 @@ class App extends Component {
 }
 
 class Buypage extends Component {
+ 
   render() {
     return (<div className="Buy">
     <header className="Buy-header">
@@ -31,16 +36,8 @@ class Buypage extends Component {
       BUY PAGE
       </p>
     </header>
-    <div class="grid-container">
-  <div class="grid-item">1</div>
-  <div class="grid-item">2</div>
-  <div class="grid-item">3</div>
-  <div class="grid-item">4</div>
-  <div class="grid-item">5</div>
-  <div class="grid-item">6</div>
-  <div class="grid-item">7</div>
-  <div class="grid-item">8</div>
-  <div class="grid-item">9</div>
+    <div className="grid-container">
+    { <Item itemdetails={item1}/> }
 </div> 
 
   </div>
@@ -57,6 +54,21 @@ class Sellpage extends Component {
       </p>
     </header>
   </div>
+    );
+  }
+}
+
+class Item extends Component {
+  constructor(props){
+    super(props);
+    this.productname=this.props.itemdetails.productname;
+    console.log(props);
+    var imgsrc=props.imgsrc;
+    var price=props.price;
+    }
+  render() {
+    return (
+    <div className="grid-item">{this.productname}</div>
     );
   }
 }
