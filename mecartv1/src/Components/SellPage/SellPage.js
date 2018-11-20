@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './SellPage.css';
 
+
 import EditAd from '../EditAd/EditAd'
 import NewAd from '../NewAd/NewAd'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -28,7 +29,7 @@ class SellPage extends Component {
       <div className="Sell">
         <header className="Sellbuttons">
           <p>
-          <Link to="/edit"><button >EDIT MY AD</button></Link>
+          <Link to="/edit"><button className="primary" >EDIT MY AD</button></Link>
           <Link to="/newAd"><button >NEW AD</button></Link>
           </p>
         </header>
