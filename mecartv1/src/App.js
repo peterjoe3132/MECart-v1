@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+
+import './App.css';
+
+
+
 import  BuyPage from "./Components/BuyPage/BuyPage.js";
 import SellPage from "./Components/SellPage/SellPage.js"
 
