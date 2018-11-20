@@ -19,7 +19,7 @@ class App extends Component {
 	          				content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
 	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
 	          				content here', making it look like readable English.
-	          				</CardText><br/><br/><br/>
+	          				</CardText>
 	           					<Link to="/buy"><Button color="primary" size="lg" block>Buy</Button></Link>
 	        			</Card>
 	      			</Col>
@@ -31,7 +31,7 @@ class App extends Component {
 	          				content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
 	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
 	          				content here', making it look like readable English.
-	          				</CardText><br/><br/><br/>
+	          				</CardText>
 	          					<Link to="/sell"><Button color="primary" size="lg" block>Sell</Button></Link>
 	        			</Card>
 	      			</Col>
