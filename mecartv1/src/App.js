@@ -12,7 +12,7 @@ class App extends Component {
 	    	<div id="body">
 	    	   <Row>
 	      			<Col sm="6">
-	       				<Card  body inverse style={{padding:'18%'}}>
+	       				<Card  body inverse style={{ backgroundColor: 'rgba(0,0,0,0)', borderColor: '#333', padding:'18%'}}>
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Buy</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
 	          				It is a long established fact that a reader will be distracted by the readable 
