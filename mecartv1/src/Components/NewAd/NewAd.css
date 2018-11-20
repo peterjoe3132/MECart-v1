@@ -1,8 +1,61 @@
-.new{
-	position:absolute;
-    top: 0;left: 0;
+html,body{
     height: 100vh;
+}
+.new{
+
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
     width: 100%;
     z-index: 10;
-    background:white;
+
+    
+    background-color: black;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,.7)), url(background1.jpg);
+    margin-bottom: none;
+    font-weight: 700;
+  
+}
+.form-check-label{
+    margin-left:5px;
+    margin-top:3px;
+}
+.form-check-input{
+    margin-left: 40px;
+}
+.terms{
+    margin-top: 20px;
+}
+/* hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 0%;
+    margin-bottom: 0%;
+} */
+.formstyle{
+    margin-left: 15%;
+    width: 70%;
+    height: 100%;
+}
+.btn-primary{
+    width: 50%;
+}
+.unit{
+    font-weight: 100;
+}
+label{
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+div.form-group{
+    margin-bottom: auto;
+}
+.lastrow{
+    margin-left: 20%;
 }
