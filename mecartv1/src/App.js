@@ -12,7 +12,8 @@ class App extends Component {
 	    	<div id="body">
 	    	   <Row >
 	      			<Col sm="6">
-	       				<Card body inverse style={{ backgroundColor: '#333', borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem'}}>
+	       				<Card body inverse style={{backgroundImage:'url("http://wallpapers.ae/wp-content/uploads/2015/12/Minimalistic-Desktop-Wallpaper.jpg")', 
+	       				borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem', marginLeft:'30px'}}>
 
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Buy</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
@@ -25,7 +26,8 @@ class App extends Component {
 	        			</Card>
 	      			</Col>
 	      			<Col sm="6">
-	        			<Card body style={{borderColor: 'white', padding:'18%', height:'100%',width:'100%',border:'none'}}>
+	        			<Card body style={{backgroundImage:'url("http://www.roscanvec.com/images/backgrounds/services-background-tall.jpg")',
+	        			backgroundSize:'cover', padding:'18%', height:'100%',width:'100%',border:'none', marginLeft:'-30px'}}>
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Sell</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
 	          				It is a long established fact that a reader will be distracted by the readable 
