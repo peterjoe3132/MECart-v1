@@ -9,20 +9,30 @@ class App extends Component {
   render() {
     return (
     	<Router>
-	    	<div>
+	    	<div id="body">
 	    	   <Row>
 	      			<Col sm="6">
-	       				<Card body>
-	          				<CardTitle>Special Title Treatment</CardTitle>
-	          				<CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-	           					<Link to="/buy"><Button>Go somewhere</Button></Link>
+	       				<Card  body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Buy</CardTitle>
+	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
+	          				It is a long established fact that a reader will be distracted by the readable 
+	          				content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
+	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
+	          				content here', making it look like readable English.
+	          				</CardText>
+	           					<Link to="/buy"><Button color="primary" size="lg" block>Buy</Button></Link>
 	        			</Card>
 	      			</Col>
 	      			<Col sm="6">
-	        			<Card body>
-	          				<CardTitle>Special Title Treatment</CardTitle>
-	          				<CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-	          					<Link to="/sell"><Button>Go somewhere</Button></Link>
+	        			<Card body style={{borderColor: 'white' }}>
+	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Sell</CardTitle>
+	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
+	          				It is a long established fact that a reader will be distracted by the readable 
+	          				content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
+	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
+	          				content here', making it look like readable English.
+	          				</CardText>
+	          					<Link to="/sell"><Button color="primary" size="lg" block>Sell</Button></Link>
 	        			</Card>
 	      			</Col>
 	    		</Row>
