@@ -6,7 +6,6 @@ class NewAd extends Component{
     render(){
         return(
             <div className="new">
-                   <h1>Hi</h1>
              <Form>
         <Row form>
           <Col md={6}>
