@@ -17,10 +17,8 @@ class App extends Component {
 
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Buy</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
-	          				It is a long established fact that a reader will be distracted by the readable 
-	          				content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
-	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
-	          				content here', making it look like readable English.
+	          				Welcome to MECart, an online buying and selling platform exclusively for the students of MODEL ENGINEERING COLLEGE.
+MECians can buy used products like books,stationeries,mini drafter etc at lower rates from this site.
 							  </CardText>
 	           					<Link to="/buy"><Button color="primary" size="lg" block>Buy</Button></Link>
 	        			</Card>
@@ -30,10 +28,7 @@ class App extends Component {
 	        			backgroundSize:'cover', padding:'18%', height:'100%',width:'100%',border:'none', marginLeft:'-30px'}}>
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Sell</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
-	          				It is a long established fact that a reader will be distracted by the readable 
-	          				content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
-	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
-	          				content here', making it look like readable English.
+	          				MECart connects local people to buy, sell or exchange used goods and services by making it    fast and easy for anyone to post a listing on the web.MECians can sell used products like books,stationeries,mini drafters etc in this site.
 							  </CardText>
 	          					 <Link to="/sell"><Button color="primary" size="lg" block>Sell</Button></Link>
 	        			</Card>
