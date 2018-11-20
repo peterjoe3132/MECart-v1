@@ -6,7 +6,7 @@ class NewAd extends Component{
     render(){
         return(
             <div className="new">
-             <Form>
+             <Form style={{paddingLeft:'10%', paddingRight:'10%'}}>
         <Row form>
           <Col md={6}>
             <FormGroup>
