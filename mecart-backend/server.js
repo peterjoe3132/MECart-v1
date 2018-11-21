@@ -36,15 +36,15 @@ app.post('/sellad',function(req, res){
     var body1= req.body;
     console.log(body1);
 connection.connect()
-connection.query('insert into product()', function (err, rows, fields) {
+connection.query('insert into product(product_name,product_desc,imgurl,category_id,price) values (body1.adtitle,body1.adesc,body1.adphoto,body1.category,body1.price)', function (err, rows, fields) {
   if (err) throw err
 
-  console.log('The solution is: ', rows[0].solution)
+  console.log('The solution is: ', rows)
 })
 
 connection.end()
 
-    res.send('Hello World!')
+    res.send('submitted!')
 
 })
     app.use(express.static('public'));
