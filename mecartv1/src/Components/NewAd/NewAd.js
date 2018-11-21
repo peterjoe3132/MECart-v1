@@ -134,13 +134,13 @@ class NewAd extends Component{
                                 * I agree to the terms and conditions 
                                 </label>
                             </div>
-                           
+                            <button className="buttonP" type="submit">Post Ad</button>
 
                    </div>
 
                 </form>
                     <br/><br/><br/>
-                 <button className="buttonP" type="submit">Post Ad</button>
+                 
             </div>
               
 
