@@ -6,3 +6,24 @@
     z-index: 10;
     background: white;
   }
+#buttonE{
+	background-color:rgba(0,0,0,0);
+	border-radius:50px;
+	border-color: white;
+	border-width: 3px;
+}
+#buttonE:hover { 
+    background-color: white;
+    color:black;
+}
+#buttonN{
+	background-color:rgba(0,0,0,0);
+	border-radius:50px;
+	border-width: 3px;
+	border-color: black;
+	color:black;
+}
+#buttonN:hover { 
+    background-color: black;
+    color:white;
+}

@@ -33,7 +33,8 @@ class SellPage extends Component {
       <div className="Sell">
           <Row >
               <Col sm="6">
-                <Card body inverse style={{ backgroundColor: '#333', borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem'}}>
+                <Card body inverse style={{backgroundImage:'url("https://wallpaperplay.com/walls/full/0/8/b/210891.jpg")',
+                 backgroundSize:'cover', borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem'}}>
 
                     <CardTitle style={{fontSize:'3rem', padding:'20px'}}>Edit My Add</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
@@ -42,11 +43,12 @@ class SellPage extends Component {
                     has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
                     content here', making it look like readable English.
                 </CardText>
-                         <Link to="/edit"><Button color="primary" size="lg" block>Edit</Button></Link>
+                         <Link to="/edit"><Button id="buttonE" size="lg" block>Edit</Button></Link>
                 </Card>
               </Col>
              <Col sm="6">
-                <Card body style={{borderColor: 'white', padding:'18%', height:'100%',width:'100%',border:'none'}}>
+                <Card body style={{backgroundImage:'url("https://www.desktopbackground.org/download/1920x1200/2011/05/24/208047_white-abstract-wallpapers-hd-download-jpg_1920x1200_h.jpg")',
+                 backgroundSize:'cover', padding:'18%', height:'100%',width:'100%',border:'none'}}>
                     <CardTitle style={{fontSize:'3rem', padding:'20px'}}>New Add</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
                     It is a long established fact that a reader will be distracted by the readable 
@@ -54,7 +56,7 @@ class SellPage extends Component {
                     has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
                     content here', making it look like readable English.
                 </CardText>
-                         <Link to="/newAd"><Button color="primary" size="lg" block>New</Button></Link>
+                         <Link to="/newAd"><Button id="buttonN" size="lg" block>New</Button></Link>
                 </Card>
               </Col>
               </Row>

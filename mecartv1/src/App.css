@@ -5,7 +5,8 @@
     width: 100%;
 	z-index: 10;
 	margin-right: 0%;
-
+	background-image:url("https://i.ytimg.com/vi/jtAm-kgoZ_E/maxresdefault.jpg");
+	background-size:cover;
 	}
 div.col-sm-6{
 	border: none;
@@ -24,10 +25,10 @@ div.col-sm-6{
 	background-color:rgba(0,0,0,0);
 	border-radius:50px;
 	border-width: 3px;
-	border-color: black;
-	color:black;
+	border-color: white;
+	color:white;
 }
 #buttonS:hover { 
-    background-color: black;
-    color:white;
+    background-color: white;
+    color:black;
 }
