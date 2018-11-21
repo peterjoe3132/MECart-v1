@@ -5,7 +5,7 @@
     width: 100%;
 	z-index: 10;
 	margin-right: 0%;
-	background-image:url("https://i.ytimg.com/vi/jtAm-kgoZ_E/maxresdefault.jpg");
+	background-image:url("maxresdefault.jpg");
 	background-size:cover;
 	}
 div.col-sm-6{
@@ -31,4 +31,10 @@ div.col-sm-6{
 #buttonS:hover { 
     background-color: white;
     color:black;
+}
+.card{
+	transition: transform 0.2s;
+}
+.card:hover{
+	transform: scale(1.1);
 }
