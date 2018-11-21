@@ -50,10 +50,10 @@ app.post('/sellad',function(req, res){
     connection.query(sql1, values1, function(err,result){
       if(err) throw err;
       body1.category=result;
-      console.log(body1.category[0].category_id+'1');
-      console.log("read from the table"+'2');
+      console.log(body1.category[0].category_id);
+      console.log("read from the table");
       values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category[0].category_id,body1.adprice]
-    console.log(values+'3')
+    console.log(values)
     console.log(body1.category[0].category_id);
   var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
   connection.query(sql, values, function (err, result) {
@@ -86,6 +86,23 @@ app.post('/buyproduct',function(req, res){
    
 
 })
+
+app.post('/edit',function(req, res){
+  //connection.connect()
+    var body2=req.body
+    values2=[body2.product_id];
+    var sql3="SELECT category_id FROM category WHERE category_name=? ";
+    connection.query(sql3, values2, function(err,result){
+      if(err) throw err;
+      console.log(result);
+      console.log("read from the table");
+      res.send(result);
+    });
+  //connection.end()
+     
+  
+  })
+
     app.use(express.static('public'));
     app.get('/test', function (req, res) {
        res.sendFile( __dirname + "/" +"public/test.html" );
