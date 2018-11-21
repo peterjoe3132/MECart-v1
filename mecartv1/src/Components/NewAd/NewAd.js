@@ -136,8 +136,8 @@ class NewAd extends Component{
                             </div>
                             <button className="buttonP" type="submit">Post Ad</button>
 
-                   </div>
-
+                   </div><br/><br/><br/>
+                    <button className="buttonP" type="submit">Post Ad</button>
                 </form>
                     <br/><br/><br/>
                  
