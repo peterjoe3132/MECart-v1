@@ -29,7 +29,7 @@ class BuyPage extends Component {
     }
     render() {
       return (<div className="Buy">
-        <div id="banner">Games</div>
+        <div className="banner">Games</div>
       <header className="Buy-header">
       </header> 
       <div className="grid-container">
