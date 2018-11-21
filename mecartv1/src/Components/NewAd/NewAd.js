@@ -71,48 +71,7 @@ import React,{Component} from 'react'
 import './NewAd.css'
 import logo from './logo.png'
 import './bootstrap.css'
-/*const networkErrorObj = {
-    status: 503
-  }
 
-function sellitem(product_name,category,product_desc,photo_url,price) {
-let requestOptions = {
-    "method": "POST",
-    "headers": {
-      "Content-Type":"application/json"
-    }
-  };
-  
-  
-  let body = {
-            "product_name": product_name,
-            "category": category,
-            "product_desc": product_desc,
-            "photo_url": photo_url,
-            "price": price
-        };
-  
-  
-  requestOptions["body"] = JSON.stringify(body);
-  
-  
-  
-  try {
-    var resp = fetch("http://localhost:8080/sellad", requestOptions);
-  
-    console.log(resp);
-  
-    return resp; 
-  }
-  
-  catch(e) {
-    
-  console.log("Request Failed: " + e);
-  
-   return networkErrorObj;
-  
-  }
-}*/
 class NewAd extends Component{
     constructor(){
         super();
@@ -148,7 +107,7 @@ class NewAd extends Component{
             <div className="formstyle">
 
              {/* <img className="logo" src={logo} width="100" height="100"/> */}
-            <form className="unit" onSubmit={this.handlesubmit} /*action = "http://127.0.0.1:8080/sellad" method = "POST"*/>
+            <form className="unit" onSubmit={this.handlesubmit} >
                     <div className="form-group ">
                         <label for="AdTitle">Ad Title *</label>
                         <input type="text" className="form-control" name="AdTitle" id="AdTitle" placeholder="Enter Title here" required maxLength="25"/>
@@ -168,15 +127,15 @@ class NewAd extends Component{
                                 </select>
                             </div>
 </div>
-                            {/* <div className="form-group col">
+                            { <div className="form-group col">
                                 <label for="AdDescription">Ad Description*</label>
                                 <textarea className="form-control" id="AdDescription" rows="3" required maxLength="200"></textarea>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                 Should not exceed 200 words
                                 </small>
-                    </div>
+                                </div> }
                     
-                    </div>
+                
                    
                     
                    <div className="row">
@@ -219,7 +178,7 @@ class NewAd extends Component{
                     </div>
                    
                    </div>
-                     */}
+                     
                    
                   <div className="row">
                        
