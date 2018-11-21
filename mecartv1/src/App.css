@@ -5,7 +5,27 @@
     width: 100%;
 	z-index: 10;
 	margin-right: 0%;
+	background-color: black;
 	}
 div.col-sm-6{
 	border: none;
+}
+#buttonB{
+	background-color:rgba(0,0,0,0);
+	border-radius:10px;
+	border-color: white;
+}
+#buttonB:hover { 
+    background-color: white;
+    color:black;
+}
+#buttonS{
+	background-color:rgba(0,0,0,0);
+	border-radius:10px;
+	border-color: black;
+	color:black;
+}
+#buttonS:hover { 
+    background-color: black;
+    color:white;
 }

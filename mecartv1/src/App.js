@@ -12,8 +12,8 @@ class App extends Component {
 	    	<div id="body">
 	    	   <Row >
 	      			<Col sm="6">
-	       				<Card body inverse style={{backgroundImage:'url("http://wallpapers.ae/wp-content/uploads/2015/12/Minimalistic-Desktop-Wallpaper.jpg")', 
-	       				borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem', marginLeft:'30px'}}>
+	       				<Card body inverse style={{backgroundImage:'url("https://wallpaperplay.com/walls/full/0/8/b/210891.jpg")', 
+	       				backgroundSize:'cover', borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem', width:'50'}}>
 
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Buy</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
@@ -22,12 +22,12 @@ class App extends Component {
 	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
 	          				content here', making it look like readable English.
 							  </CardText>
-	           					<Link to="/buy"><Button color="primary" size="lg" block>Buy</Button></Link>
+	           					<Link to="/buy"><Button id="buttonB" size="lg" block>Buy</Button></Link>
 	        			</Card>
 	      			</Col>
 	      			<Col sm="6">
-	        			<Card body style={{backgroundImage:'url("http://www.roscanvec.com/images/backgrounds/services-background-tall.jpg")',
-	        			backgroundSize:'cover', padding:'18%', height:'100%',width:'100%',border:'none', marginLeft:'-30px'}}>
+	        			<Card body style={{backgroundImage:'url("https://www.desktopbackground.org/download/1920x1200/2011/05/24/208047_white-abstract-wallpapers-hd-download-jpg_1920x1200_h.jpg")',
+	        			backgroundSize:'cover', padding:'18%', height:'100%',width:'100%',border:'none',width:'100%'}}>
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Sell</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
 	          				It is a long established fact that a reader will be distracted by the readable 
@@ -35,7 +35,7 @@ class App extends Component {
 	          				has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
 	          				content here', making it look like readable English.
 							  </CardText>
-	          					 <Link to="/sell"><Button color="primary" size="lg" block>Sell</Button></Link>
+	          					 <Link to="/sell"><Button id="buttonS" size="lg" block>Sell</Button></Link>
 	        			</Card>
 	      			</Col>
 	    		</Row>
