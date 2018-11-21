@@ -1,20 +1,17 @@
 html,body{
     height: 100vh;
+ 
 }
 .new{
-
+    font-size:20px;
+    padding-top:50px;
     position: absolute;
     top: 0;left: 0;
     height: 100%;
     width: 100%;
     z-index: 10;
-
-    
-    background-color: black;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,.7)), url(background1.jpg);
+    background-image:url("https://images.wallpaperscraft.com/image/room_vanity_flooring_wall_80351_5750x4313.jpg");
+    background-size:cover;
     margin-bottom: none;
     font-weight: 700;
   
@@ -29,23 +26,19 @@ html,body{
 .terms{
     margin-top: 20px;
 }
-/* hr{
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin-top: 0%;
-    margin-bottom: 0%;
-} */
 .formstyle{
     margin-left: 15%;
     width: 70%;
     height: 100%;
+    padding:50px;
+    background-color:rgba(0,0,0,0.5);
 }
 .btn-primary{
+    margin-right:50%;
     width: 50%;
 }
 .unit{
+    color:white;
     font-weight: 100;
 }
 label{
@@ -54,8 +47,39 @@ label{
 }
 
 div.form-group{
+    padding-top:10px;
     margin-bottom: auto;
 }
 .lastrow{
     margin-left: 20%;
+}   
+.buttonP{
+    margin-left:37.5%;
+    width:25%;
+    height:50px;
+    background-color:rgba(0,0,0,0);
+    border-radius:5px;
+    background-color: rgba(250,250,250,0.8);
+    border-width: 0px;
+    color:black;
+}
+.buttonP:hover { 
+    background-color: white;
+    color:#333;
+}
+
+.text{
+     width:100%;
+     background-color:rgba(0,0,0,0);
+     font-size:15px;
+     border-radius:1px;
+     border-color:rgba(0,0,0,0);
+     border-bottom-color: rgba(250,250,250,0.1);
+     padding:10px;
+     padding-left:20px;
+     color:rgba(250,250,250,0.7);
+
+}
+::placeholder { 
+    color:rgba(250,250,250,0.7);
 }
