@@ -71,8 +71,76 @@ import React,{Component} from 'react'
 import './NewAd.css'
 import logo from './logo.png'
 import './bootstrap.css'
+/*const networkErrorObj = {
+    status: 503
+  }
 
+function sellitem(product_name,category,product_desc,photo_url,price) {
+let requestOptions = {
+    "method": "POST",
+    "headers": {
+      "Content-Type":"application/json"
+    }
+  };
+  
+  
+  let body = {
+            "product_name": product_name,
+            "category": category,
+            "product_desc": product_desc,
+            "photo_url": photo_url,
+            "price": price
+        };
+  
+  
+  requestOptions["body"] = JSON.stringify(body);
+  
+  
+  
+  try {
+    var resp = fetch("http://localhost:8080/sellad", requestOptions);
+  
+    console.log(resp);
+  
+    return resp; 
+  }
+  
+  catch(e) {
+    
+  console.log("Request Failed: " + e);
+  
+   return networkErrorObj;
+  
+  }
+}*/
 class NewAd extends Component{
+    constructor(){
+        super();
+        this.handlesubmit=this.handlesubmit.bind(this);
+        
+    }
+    
+    handlesubmit(event){
+        event.preventDefault();
+        var data= new FormData(event.target);
+        var adtitle=data.get('AdTitle')
+        var body={
+            "adtitle": adtitle
+        }
+        var requestOptions = {
+            "method": "POST",
+            "headers": {
+              "Content-Type":"application/json",
+              "Access-Control-Allow-Origin":"*",
+              'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
+            }
+          };
+          requestOptions["body"] = JSON.stringify(body);
+          console.log(requestOptions);
+      var resp=  fetch("http://127.0.0.1:8080/sellad",requestOptions);
+    }
+        
     render(){
         return(
             <div className="new">
@@ -80,10 +148,10 @@ class NewAd extends Component{
             <div className="formstyle">
 
              {/* <img className="logo" src={logo} width="100" height="100"/> */}
-            <form className="unit">
+            <form className="unit" onSubmit={this.handlesubmit} /*action = "http://127.0.0.1:8080/sellad" method = "POST"*/>
                     <div className="form-group ">
                         <label for="AdTitle">Ad Title *</label>
-                        <input type="text" className="form-control" id="AdTitle" placeholder="Enter Title here" required maxLength="25"/>
+                        <input type="text" className="form-control" name="AdTitle" id="AdTitle" placeholder="Enter Title here" required maxLength="25"/>
                         <small id="AdTitleHelpBlock" class="form-text text-muted">
                         Title should not exceed 25 characters
                         </small>                 
@@ -99,8 +167,8 @@ class NewAd extends Component{
                                 {/* <option></option> */}
                                 </select>
                             </div>
-
-                            <div className="form-group col">
+</div>
+                            {/* <div className="form-group col">
                                 <label for="AdDescription">Ad Description*</label>
                                 <textarea className="form-control" id="AdDescription" rows="3" required maxLength="200"></textarea>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
@@ -151,24 +219,10 @@ class NewAd extends Component{
                     </div>
                    
                    </div>
-                    
+                     */}
                    
                   <div className="row">
-                        {/* <div className="form-group col"  >
-                                <label for="category" required>Class*</label>
-                                <select className="form-control" id="Category" required >
-                                <option value="0">Select Class:</option>
-                                <option>Class 1</option>
-                                <option>Class 2</option>
-                                <option>Class 3</option>
-                                <option>Class 4</option>
-                                <option>Class 5</option>
-                                <option>Class 6</option>
-                                <option>Class 7</option>
-                                <option>Class 8</option>
-                                </select>
-                            </div>
-                             */}
+                       
                         
                             
                             <div class="form-check col terms">
