@@ -5,16 +5,27 @@
     width: 100%;
     z-index: 10;
     background: white;
-    
-  
+    background-image:url("https://i.ytimg.com/vi/jtAm-kgoZ_E/maxresdefault.jpg");
+    background-size:cover;
   }
-  .Sellbuttons{
-    background-color: rgb(182, 7, 45);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-
-  }
+#buttonE{
+	background-color:rgba(0,0,0,0);
+	border-radius:50px;
+	border-color: white;
+	border-width: 3px;
+}
+#buttonE:hover { 
+    background-color: white;
+    color:black;
+}
+#buttonN{
+	background-color:rgba(0,0,0,0);
+	border-radius:50px;
+	border-width: 3px;
+	border-color: white;
+	color:white;
+}
+#buttonN:hover { 
+    background-color: white;
+    color:black;
+}
