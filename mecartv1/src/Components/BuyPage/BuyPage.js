@@ -15,7 +15,7 @@ class BuyPage extends Component {
       <header className="Buy-header">
         <p>
         BUY PAGE
-        </p>
+        </p>  
       </header>
       
       <div className="grid-container">
@@ -25,8 +25,7 @@ class BuyPage extends Component {
     <Item itemdetails={item1}/>
  
     
-  </div>  
-  { <GuttersGrid /> }
+  </div> 
     </div>
       );
     }
@@ -42,8 +41,8 @@ class BuyPage extends Component {
     render() {
       return (
         <Router>
-          <div>
-          <Link to="/product"><div className="grid-item"><div> <img src={this.imgsrc}/></div><div>Product Name:{this.productname}</div>Price:{this.price}</div></Link>
+          <div style={{padding:'20px'}}>
+          <Link to="/product"><div className="grid-item"><div> <img src={this.imgsrc}/></div><br/><br/><div>Product Name:{this.productname}</div><b>Price:{this.price}</b></div></Link>
        <Route path="/product" component={Product} />
        </div>
       </Router>
