@@ -14,8 +14,12 @@
     grid-template-columns: auto auto auto;
     padding: 10px;
   }
+.grid-item:hover{
+    transform: scale(1.1);
+} 
   .grid-item {
-     box-shadow: 4px 4px 20px  #888888 ;
+    transition: transform 0.2s;
+    box-shadow: 4px 4px 20px  #888888 ;
     padding: 20px;
     font-size: 18px;
     color:black;
