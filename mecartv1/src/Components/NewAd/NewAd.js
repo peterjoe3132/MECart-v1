@@ -136,11 +136,11 @@ class NewAd extends Component{
                             </div>
                            
 
-                   </div>
-
+                   </div><br/><br/><br/>
+                    <button className="buttonP" type="submit">Post Ad</button>
                 </form>
                     <br/><br/><br/>
-                 <button className="buttonP" type="submit">Post Ad</button>
+                
             </div>
               
 
