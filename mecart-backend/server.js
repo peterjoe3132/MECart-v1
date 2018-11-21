@@ -34,7 +34,7 @@ connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
 
 app.post('/sellad',function(req, res){ 
     var body1= req.body;
-    console.log(body1);
+    // console.log(body1);
     // if(body1.category=="Stationary")
     // {
     //   body1.category=1;
@@ -46,19 +46,30 @@ app.post('/sellad',function(req, res){
     //   body1.category=3;
     // }
     values1=[body1.category];
-    var sql1="SELECT category_id FROM category WHERE category_name==? ";
-    body1.category=connection.query(sql1, values1, function(err,result){
+    var sql1="SELECT category_id FROM category WHERE category_name=? ";
+    connection.query(sql1, values1, function(err,result){
       if(err) throw err;
-      console.log("read from the table");
-    })
-    values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category,body1.adprice]
-    console.log(values);
-//connection.connect()
+      body1.category=result;
+      console.log(body1.category[0].category_id+'1');
+      console.log("read from the table"+'2');
+      values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category[0].category_id,body1.adprice]
+    console.log(values+'3')
+    console.log(body1.category[0].category_id);
   var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
   connection.query(sql, values, function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
   });
+    })
+//     values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category[0].category_id,body1.adprice]
+//     console.log(values+'3')
+// //connection.connect()
+// console.log(body1.category[0].category_id);
+//   var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
+//   connection.query(sql, values, function (err, result) {
+//     if (err) throw err;
+//     console.log("Number of records inserted: " + result.affectedRows);
+//   });
 //connection.end()
     res.send('Ad had been Posted')
 
