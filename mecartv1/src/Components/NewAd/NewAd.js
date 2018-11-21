@@ -54,7 +54,7 @@ class NewAd extends Component{
                  <div className="row">
                             <div className="form-group col" >
                                 <label for="category" required>Category*</label>
-                                <select className="form-control" id="Category" required >
+                                <select className="form-control" id="Category" name="Category" required >
                                 <option value="0">Select Category:</option>
                                 <option>Stationary</option>
                                 <option>Books</option>
@@ -63,30 +63,22 @@ class NewAd extends Component{
                                 </select>
                             </div>
 </div>
-<<<<<<< HEAD
                          <div className="form-group col">
-=======
-                            { <div className="form-group col">
->>>>>>> 490754572afbd0701eeddc1975886aeb11996dc5
                                 <label for="AdDescription">Ad Description*</label>
-                                <textarea className="form-control" id="AdDescription" rows="3" required maxLength="200"></textarea>
+                                <textarea className="form-control" id="AdDescription" rows="3" name="AdDescription" required maxLength="200"></textarea>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                 Should not exceed 200 words
                                 </small>
                                 </div> }
                     
-<<<<<<< HEAD
                
-=======
-                
->>>>>>> 490754572afbd0701eeddc1975886aeb11996dc5
                    
                     
                    <div className="row">
 
                         <div className="form-group col">
                             <label for="AdPhotos">Upload Photos*</label>
-                            <input type="text" className="form-control" id="AdPhotos" placeholder="Insert URL" required/>
+                            <input type="text" className="form-control" id="AdPhotos" name="AdPhotos" placeholder="Insert URL" required/>
                             <small id="passwordHelpBlock" class="form-text text-muted">
                             Tip:Photos attract buyers
                             </small>
@@ -95,7 +87,7 @@ class NewAd extends Component{
 
                         <div className="form-group col">
                             <label for="AdPrice">Price *</label>
-                            <input type="number" className="form-control" id="AdPrice" placeholder="Enter Price here" required />
+                            <input type="number" className="form-control" id="AdPrice" name="AdPrice"placeholder="Enter Price here" required />
                                         
                         </div>
                     
@@ -107,7 +99,7 @@ class NewAd extends Component{
 
                     <div className="form-group col ">
                         <label for="ContactName">Name *</label>
-                        <input type="text" className="form-control" id="ContactName" placeholder="Enter Name here" required maxLength="25"/>
+                        <input type="text" className="form-control" id="ContactName" name="ContactName" placeholder="Enter Name here" required maxLength="25"/>
                         <small id="AdTitleHelpBlock" className="form-text text-muted">
                             Name to be displayed on the Ad
                         </small>                 
@@ -115,20 +107,15 @@ class NewAd extends Component{
 
                      <div className="form-group col ">
                         <label for="ContactNum">Phone *</label>
-                        <input type="tel" className="form-control" id="ContactNum" placeholder="Enter Phone number here" required maxLength="10"/>
+                        <input type="tel" className="form-control" id="ContactNum" name="ContactNum" placeholder="Enter Phone number here" required maxLength="10"/>
                         <small id="AdTitleHelpBlock" className="form-text text-muted">
                             Contact to be shown
                         </small>                 
                     </div>
                    
                    </div>
-<<<<<<< HEAD
                     
 
-=======
-                     
-                   
->>>>>>> 490754572afbd0701eeddc1975886aeb11996dc5
                   <div className="row">
                        
                         
