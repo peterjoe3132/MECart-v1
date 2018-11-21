@@ -1,6 +1,5 @@
 html,body{
-    height: 100vh;
- 
+    height: 100vh; 
 }
 .new{
     font-size:20px;
@@ -10,7 +9,7 @@ html,body{
     height: 100%;
     width: 100%;
     z-index: 10;
-    background-image:url("https://images.wallpaperscraft.com/image/room_vanity_flooring_wall_80351_5750x4313.jpg");
+    background-image:url("wallpaper.jpg");
     background-size:cover;
     margin-bottom: none;
     font-weight: 700;
