@@ -25,13 +25,24 @@
     color:black;
 
   }
-#banner{
-    padding:200px;
+#Games{
+    background-image:url("http://www.4usky.com/data/out/98/164889563-ultimate-wallpapers.jpg");
+}
+#Books{
+    background-image:url("https://wallpapercave.com/wp/wp2036897.jpg");
+}
+#Electronics{
+    background-image:url("https://www.wallpaperup.com/uploads/wallpapers/2016/03/01/903030/87786ac645ba2a2169a69f4d4553c024-700.jpg");
+}
+#Stationary{
+    background-image:url("https://sg.fiverrcdn.com/photos/4656361/original/mmmm.jpg?1424180579");
+}
+.banner{
+      padding:200px;
     position:absolute;
     width:100%;
-    height:100px;
-    background-image:url("http://www.4usky.com/data/out/98/164889563-ultimate-wallpapers.jpg");
-    background-size:cover;
+    height:100px; 
+       background-size:cover;
     color:white;
     font-size: 50px;
 }

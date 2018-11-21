@@ -14,17 +14,38 @@ const item1={
 
 class BuyPage extends Component {
     render() {
-      return (<div className="Buy">
-        <div id="banner">Games</div>
-      <header className="Buy-header">
-      </header> 
-      <div className="grid-container">
-    <Item itemdetails={item1}/>
-    <Item itemdetails={item1}/>
-    <Item itemdetails={item1}/>
-    <Item itemdetails={item1}/>    
-  </div> 
-    </div>
+      return (
+      <div className="Buy">
+        <div id="Games" className="banner">Games</div>
+          <div className="grid-container">
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>    
+        </div> 
+        <div id="Books" className="banner" >Books</div>
+            <div className="grid-container">
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>    
+        </div> 
+         <div id="Electronics" className="banner" >Electronics</div>
+            <div className="grid-container">
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>    
+        </div> 
+         <div id="Stationary" className="banner" >Stationary</div>
+            <div className="grid-container">
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>
+            <Item itemdetails={item1}/>    
+        </div> 
+
+      </div>
       );
     }
   }
