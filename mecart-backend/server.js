@@ -18,7 +18,7 @@ app.use( bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res){ 
-    connection.connect()
+    //connection.connect()
 
 connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
   if (err) throw err
@@ -26,7 +26,7 @@ connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
   console.log('The solution is: ', rows[0].solution)
 })
 
-connection.end()
+//connection.end()
 
     res.send('Hello World!')
 
@@ -35,16 +35,31 @@ connection.end()
 app.post('/sellad',function(req, res){ 
     var body1= req.body;
     console.log(body1);
-connection.connect()
-connection.query('insert into product(product_name,product_desc,imgurl,category_id,price) values (body1.adtitle,body1.adesc,body1.adphoto,body1.category,body1.price)', function (err, rows, fields) {
-  if (err) throw err
-
-  console.log('The solution is: ', rows)
-})
-
-connection.end()
-
+    values=[body1.adtitle,body1.adesc,body1.adphoto,'1',body1.adprice]
+    console.log(values);
+//connection.connect()
+  var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
+  connection.query(sql, values, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records inserted: " + result.affectedRows);
+  });
+//connection.end()
     res.send('submitted!')
+
+})
+app.post('/sellad',function(req, res){ 
+    var body1= req.body;
+    console.log(body1);
+    values=[body1.adtitle,body1.adesc,body1.adphoto,'1',body1.adprice]
+    console.log(values);
+//connection.connect()
+  var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
+  connection.query(sql, values, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records inserted: " + result.affectedRows);
+  });
+//connection.end()
+    res.send('Ad had been Posted!')
 
 })
     app.use(express.static('public'));
