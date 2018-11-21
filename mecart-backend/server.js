@@ -44,22 +44,19 @@ app.post('/sellad',function(req, res){
     console.log("Number of records inserted: " + result.affectedRows);
   });
 //connection.end()
-    res.send('submitted!')
+    res.send('Ad had been Posted')
 
 })
-app.post('/sellad',function(req, res){ 
-    var body1= req.body;
-    console.log(body1);
-    values=[body1.adtitle,body1.adesc,body1.adphoto,'1',body1.adprice]
-    console.log(values);
+app.post('/buyproduct',function(req, res){
 //connection.connect()
-  var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
-  connection.query(sql, values, function (err, result) {
+  var sql = "SELECT * FROM product";
+  connection.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Number of records inserted: " + result.affectedRows);
+    console.log(result);
+    res.send(result);
   });
 //connection.end()
-    res.send('Ad had been Posted!')
+   
 
 })
     app.use(express.static('public'));
