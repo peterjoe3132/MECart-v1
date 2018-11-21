@@ -43,7 +43,7 @@ class NewAd extends Component{
             <div className="formstyle">
 
              {/* <img className="logo" src={logo} width="100" height="100"/> */}
-            <form className="unit" onSubmit={this.handlesubmit} /*action = "http://127.0.0.1:8080/sellad" method = "POST"*/>
+            <form className="unit" onSubmit={this.handlesubmit} >
                     <div className="form-group ">
                         <label for="AdTitle">Ad Title *</label>
                         <input type="text" className="form-control" name="AdTitle" id="AdTitle" placeholder="Enter Title here" required maxLength="25"/>
@@ -63,15 +63,23 @@ class NewAd extends Component{
                                 </select>
                             </div>
 </div>
+<<<<<<< HEAD
                          <div className="form-group col">
+=======
+                            { <div className="form-group col">
+>>>>>>> 490754572afbd0701eeddc1975886aeb11996dc5
                                 <label for="AdDescription">Ad Description*</label>
                                 <textarea className="form-control" id="AdDescription" rows="3" required maxLength="200"></textarea>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                 Should not exceed 200 words
                                 </small>
-                    </div>
+                                </div> }
                     
+<<<<<<< HEAD
                
+=======
+                
+>>>>>>> 490754572afbd0701eeddc1975886aeb11996dc5
                    
                     
                    <div className="row">
@@ -114,8 +122,13 @@ class NewAd extends Component{
                     </div>
                    
                    </div>
+<<<<<<< HEAD
                     
 
+=======
+                     
+                   
+>>>>>>> 490754572afbd0701eeddc1975886aeb11996dc5
                   <div className="row">
                        
                         
