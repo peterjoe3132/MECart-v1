@@ -1,67 +1,3 @@
-// import React, { Component } from 'react';
-// import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-// import './NewAd.css';
-// import './bootstrap.css'
-// class NewAd extends Component{
-//     render(){
-//         return(
-//             <div className="new">
-//             <Form >
-//         <Row form >
-//           <Col md={6}>
-//             <FormGroup inline >
-//               <Label for="exampleEmail" className="mr-sm-2">Email</Label>
-//               <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-//             </FormGroup>
-//           </Col>
-//           <Col md={6}>
-//             <FormGroup>
-//               <Label for="examplePassword">Password</Label>
-//               <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-//             </FormGroup>
-//           </Col>
-//         </Row>
-//         <FormGroup>
-//           <Label for="exampleAddress">Address</Label>
-//           <Input type="text" name="address" id="exampleAddress" placeholder="1234 Main St"/>
-//         </FormGroup>
-//         <FormGroup>
-//           <Label for="exampleAddress2">Address 2</Label>
-//           <Input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor"/>
-//         </FormGroup>
-//         <Row form>
-//           <Col md={6}>
-//             <FormGroup>
-//               <Label for="exampleCity">City</Label>
-//               <Input type="text" name="city" id="exampleCity"/>
-//             </FormGroup>
-//           </Col>
-//           <Col md={4}>
-//             <FormGroup>
-//               <Label for="exampleState">State</Label>
-//               <Input type="text" name="state" id="exampleState"/>
-//             </FormGroup>
-//           </Col>
-//           <Col md={2}>
-//             <FormGroup>
-//               <Label for="exampleZip">Zip</Label>
-//               <Input type="text" name="zip" id="exampleZip"/>
-//             </FormGroup>  
-//           </Col>
-//         </Row>
-//         <FormGroup check>
-//           <Input type="checkbox" name="check" id="exampleCheck"/>
-//           <Label for="exampleCheck" check>Check me out</Label>
-//         </FormGroup>
-//         <Button>Sign in</Button>
-//       </Form>
-
-//          </div>
-//         );
-//     }
-// }
-
-// export default NewAd
 
 
 
@@ -71,48 +7,7 @@ import React,{Component} from 'react'
 import './NewAd.css'
 import logo from './logo.png'
 import './bootstrap.css'
-/*const networkErrorObj = {
-    status: 503
-  }
 
-function sellitem(product_name,category,product_desc,photo_url,price) {
-let requestOptions = {
-    "method": "POST",
-    "headers": {
-      "Content-Type":"application/json"
-    }
-  };
-  
-  
-  let body = {
-            "product_name": product_name,
-            "category": category,
-            "product_desc": product_desc,
-            "photo_url": photo_url,
-            "price": price
-        };
-  
-  
-  requestOptions["body"] = JSON.stringify(body);
-  
-  
-  
-  try {
-    var resp = fetch("http://localhost:8080/sellad", requestOptions);
-  
-    console.log(resp);
-  
-    return resp; 
-  }
-  
-  catch(e) {
-    
-  console.log("Request Failed: " + e);
-  
-   return networkErrorObj;
-  
-  }
-}*/
 class NewAd extends Component{
     constructor(){
         super();
@@ -168,7 +63,7 @@ class NewAd extends Component{
                                 </select>
                             </div>
 </div>
-                            {/* <div className="form-group col">
+                         <div className="form-group col">
                                 <label for="AdDescription">Ad Description*</label>
                                 <textarea className="form-control" id="AdDescription" rows="3" required maxLength="200"></textarea>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
@@ -176,7 +71,7 @@ class NewAd extends Component{
                                 </small>
                     </div>
                     
-                    </div>
+               
                    
                     
                    <div className="row">
@@ -219,8 +114,8 @@ class NewAd extends Component{
                     </div>
                    
                    </div>
-                     */}
-                   
+                    
+
                   <div className="row">
                        
                         
