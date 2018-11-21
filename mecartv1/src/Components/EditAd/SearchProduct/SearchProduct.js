@@ -33,7 +33,7 @@ class SearchProduct extends Component{
     render(){
         return(
             <div class="search">
-                <form>
+                <form onSubmit={this.handlesubmit}>
                     <label for="search">Enter product ID</label>
                     <input type="number" id="search" name="search" />
                     <button type="submit">SEARCH!</button>
