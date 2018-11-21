@@ -25,7 +25,6 @@ class NewAd extends Component{
             "adtitle": adtitle,
             "category": category,
             "adesc":adesc,
-            "category":category,
             "adprice": adprice,
             "adphoto":adphoto,
             "contname":contname,
@@ -42,7 +41,7 @@ class NewAd extends Component{
           };
           requestOptions["body"] = JSON.stringify(body);
           console.log(requestOptions);
-      var resp=  fetch("http://127.0.0.1:8080/sellad",requestOptions);
+        var resp= fetch("http://127.0.0.1:8080/sellad",requestOptions);
     }
         
     render(){
