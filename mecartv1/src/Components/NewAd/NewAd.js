@@ -83,8 +83,22 @@ class NewAd extends Component{
         event.preventDefault();
         var data= new FormData(event.target);
         var adtitle=data.get('AdTitle')
+        var category=data.get('Category')
+        var adesc=data.get('AdDescription')
+        var adprice=data.get('AdPrice')
+        var adphoto=data.get('AdPhotos')
+        var contname=data.get('ContactName')
+        var contnum=data.get('ContactNum')
+
         var body={
-            "adtitle": adtitle
+            "adtitle": adtitle,
+            "category": category,
+            "adesc":adesc,
+            "category":category,
+            "adprice": adprice,
+            "adphoto":adphoto,
+            "contname":contname,
+            "contnum":contnum
         }
         var requestOptions = {
             "method": "POST",
