@@ -11,7 +11,7 @@ class App extends Component {
     	<Router>
 	    	<div id="body">
 	    	   <Row >
-	      			<Col sm="6" style={{padding:'5%'}}>
+	      			<Col sm="6" style={{padding:'3%'}}>
 	       				<Card body inverse style={{backgroundColor:'rgba(0,0,0,0.5)', 
 	       				 borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem'}}>
 
@@ -23,7 +23,7 @@ MECians can buy used products like books,stationeries,mini drafter etc at lower 
 	           					<Link to="/buy"><Button id="buttonB" size="lg" block>Buy</Button></Link>
 	        			</Card>
 	      			</Col>
-	      			<Col sm="6" style={{padding:'5%'}}>
+	      			<Col sm="6" style={{padding:'3%'}}>
 	        			<Card body inverse style={{backgroundColor:'rgba(0,0,0,0.5)', padding:'18%', height:'100%',width:'100%',border:'none'}}>
 	          				<CardTitle style={{fontSize:'3rem', padding:'20px'}}>Sell</CardTitle>
 	          				<CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>

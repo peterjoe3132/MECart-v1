@@ -11,30 +11,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class SellPage extends Component {
     render() {
       return (
-        // <Router>
-        //   <div className="Sell">
-        //   <div className="buttons">
-        //     <Link to="/edit"><button>Edit My Ad</button></Link>
-        //     <Link to="/newAd"><button>New Ad</button></Link>
-        //   </div>
-        
-          
-        //   <Route path='/edit' Component={EditAd} />  
-        //   <Route path='/newAd' Component={EditAd} />        
-        //   </div>
-
-        // </Router>
-
-
-
-
-
         <Router>
       <div className="Sell">
           <Row >
-              <Col sm="6">
-                <Card body inverse style={{backgroundImage:'url("https://wallpaperplay.com/walls/full/0/8/b/210891.jpg")',
-                 backgroundSize:'cover', borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem'}}>
+              <Col sm="6" style={{padding:'3%'}}>
+                <Card body inverse style={{backgroundColor:'rgba(0,0,0,0.5)', borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem'}}>
 
                     <CardTitle style={{fontSize:'3rem', padding:'20px'}}>Edit My Add</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
@@ -46,9 +27,8 @@ class SellPage extends Component {
                          <Link to="/edit"><Button id="buttonE" size="lg" block>Edit</Button></Link>
                 </Card>
               </Col>
-             <Col sm="6">
-                <Card body style={{backgroundImage:'url("https://www.desktopbackground.org/download/1920x1200/2011/05/24/208047_white-abstract-wallpapers-hd-download-jpg_1920x1200_h.jpg")',
-                 backgroundSize:'cover', padding:'18%', height:'100%',width:'100%',border:'none'}}>
+             <Col sm="6" style={{padding:'3%'}}>
+                <Card body inverse style={{backgroundColor:'rgba(0,0,0,0.5)', padding:'18%', height:'100%',width:'100%',border:'none'}}>
                     <CardTitle style={{fontSize:'3rem', padding:'20px'}}>New Add</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
                     It is a long established fact that a reader will be distracted by the readable 
