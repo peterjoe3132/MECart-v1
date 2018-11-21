@@ -4,6 +4,7 @@ import './SellPage.css';
 
 import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import EditAd from '../EditAd/EditAd'
+import SearchProduct from '../EditAd/SearchProduct/SearchProduct'
 import NewAd from '../NewAd/NewAd'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -40,7 +41,7 @@ class SellPage extends Component {
                 </Card>
               </Col>
               </Row>
-        <Route path="/edit" component={EditAd} />
+        <Route path="/edit" component={SearchProduct} />
         <Route path="/newAd" component={NewAd} />
       </div>
       </Router>
