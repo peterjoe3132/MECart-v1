@@ -91,7 +91,7 @@ app.post('/edit',function(req, res){
   //connection.connect()
     var body2=req.body
     values2=[body2.product_id];
-    var sql3="SELECT category_id FROM category WHERE category_name=? ";
+    var sql3="SELECT * FROM product WHERE product_id=? ";
     connection.query(sql3, values2, function(err,result){
       if(err) throw err;
       console.log(result);
