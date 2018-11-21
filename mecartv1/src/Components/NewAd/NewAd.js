@@ -65,7 +65,7 @@ class NewAd extends Component{
                                 <select className="text" id="Category" name="Category" required >
                                 <option value="0" >Select Category:</option>
                                 <option style={{color:'black'}}>Stationary</option>
-                                <option style={{color:'black'}}>Books</option>
+                                <option style={{color:'black'}}>books</option>
                                 <option style={{color:'black'}}>Electronics</option>
                                 {/* <option></option> */}
                                 </select>
