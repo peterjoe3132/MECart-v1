@@ -35,26 +35,14 @@ class SearchProduct extends Component{
     }
     
 
-    //to check whether to redirect the confirmation to be done from the server
-
-    // componentDidMount() {
-  
-    //     var requestOptions = {
-    //       "method": "POST",
-    //       "headers": {
-    //         "Content-Type":"application/json",
-    //         "Access-Control-Allow-Origin":"*",
-    //         'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-    //         'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
-    //       }
-    //     };
-    //     console.log(requestOptions);
-    //     fetch('http://127.0.0.1:8080/edit',requestOptions)
-    //     .then(res => res.json())
-    //     .then(json => this.setState({ data: json }));
-    //     }
-
     render(){
+        var flag=0
+            if(this.state.data[0]!=undefined){
+                flag=1;
+            }
+            else{
+                flag=0;
+            }
         return(
             <div class="search">
                 <form onSubmit={this.handlesubmit}>
