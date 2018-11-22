@@ -18,7 +18,7 @@ class SellPage extends Component {
               <Col sm="6" style={{padding:'3%'}}>
                 <Card body inverse style={{backgroundColor:'rgba(0,0,0,0.5)', borderColor: 'rgba(0,0,0,0)', padding:'18%', height:'60rem'}}>
 
-                    <CardTitle style={{fontSize:'3rem', padding:'20px'}}>Edit My Add</CardTitle>
+                    <CardTitle style={{fontSize:'3rem', padding:'20px'}}>Edit My Ad</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
                     It is a long established fact that a reader will be distracted by the readable 
                     content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
@@ -30,7 +30,7 @@ class SellPage extends Component {
               </Col>
              <Col sm="6" style={{padding:'3%'}}>
                 <Card body inverse style={{backgroundColor:'rgba(0,0,0,0.5)', padding:'18%', height:'100%',width:'100%',border:'none'}}>
-                    <CardTitle style={{fontSize:'3rem', padding:'20px'}}>New Add</CardTitle>
+                    <CardTitle style={{fontSize:'3rem', padding:'20px'}}>New Ad</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
                     It is a long established fact that a reader will be distracted by the readable 
                     content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
