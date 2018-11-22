@@ -34,18 +34,7 @@ connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
 
 app.post('/sellad',function(req, res){ 
     var body1= req.body;
-    // console.log(body1);
-    // if(body1.category=="Stationary")
-    // {
-    //   body1.category=1;
-    // }
-    // else if(body1.category=="Books"){
-    //   body1.category=2;
-    // }
-    // else if(body1.category=="Electronics"){
-    //   body1.category=3;
-    // }
-    values1=[body1.category];
+   [body1.category];
     var sql1="SELECT category_id FROM category WHERE category_name=? ";
     connection.query(sql1, values1, function(err,result){
       if(err) throw err;
