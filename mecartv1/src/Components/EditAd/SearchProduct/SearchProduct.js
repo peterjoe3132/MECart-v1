@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import EditAd from '../EditAd.js'
+
 
 class SearchProduct extends Component{
     constructor(props){
@@ -36,24 +39,36 @@ class SearchProduct extends Component{
     
 
     render(){
-        var flag=0
+        var flag=1
             if(this.state.data[0]!=undefined){
                 flag=1;
             }
             else{
-                flag=0;
+                flag=2;
             }
         return(
-            <div class="search">
-                <form onSubmit={this.handlesubmit}>
-                    <label for="search">Enter product ID</label>
-                    <input type="number" id="search" name="search" />
-                    <button type="submit">SEARCH!</button>
-                </form>
-                {this.state.data.map(el => (
-                 <div>{el.product_name}</div>
-          ))}
-            </div>
+            <Router>
+                            <div class="search">
+                            <form onSubmit={this.handlesubmit}>
+                                <label for="search">Enter product ID</label>
+                                <input type="number" id="search" name="search" />
+                                <button type="submit">SEARCH!</button>
+                                hey there 
+                                <Link to="/editad"><button>Click to Edit!</button></Link>
+                                <Route to="/editad" component={EditAd}/>
+                            </form>
+                           
+
+
+                            
+                            {this.state.data.map(el => (
+                            <div>{el.product_name}</div>
+                    ))}
+                   
+                        </div>
+
+            </Router>
+           
         );
 
     }
