@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 class SearchProduct extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.handlesubmit=this.handlesubmit.bind(this);
+        this.state = { data: [] };
         
     }
     handlesubmit(event){
@@ -27,7 +28,10 @@ class SearchProduct extends Component{
           };
           requestOptions["body"] = JSON.stringify(body);
           console.log(requestOptions);
-        var resp= fetch("http://127.0.0.1:8080/edit",requestOptions);
+        fetch("http://127.0.0.1:8080/edit",requestOptions)
+        .then(res => res.json())
+        .then(json => this.setState({ data: json }));
+        console.log(this.state.data);
     }
 
     render(){
