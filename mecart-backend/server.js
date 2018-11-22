@@ -84,7 +84,6 @@ app.post('/edit',function(req, res){
     connection.query(sql3, values2, function(err,result){
       if(err) throw err;
       console.log(result);
-      console.log("read from the table");
       res.send(result);
     });
   //connection.end()

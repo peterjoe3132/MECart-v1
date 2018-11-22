@@ -30,10 +30,10 @@ class SearchProduct extends Component{
           console.log(requestOptions);
         fetch("http://127.0.0.1:8080/edit",requestOptions)
         .then(res => res.json())
-        .then(json => this.setState({ data: json }));
-        console.log(this.state.data);
+        .then(json => this.setState({ data:json }));
+        
     }
-
+    
 
     //to check whether to redirect the confirmation to be done from the server
 
@@ -62,6 +62,9 @@ class SearchProduct extends Component{
                     <input type="number" id="search" name="search" />
                     <button type="submit">SEARCH!</button>
                 </form>
+                {this.state.data.map(el => (
+                 <div>{el.product_name}</div>
+          ))}
             </div>
         );
 
