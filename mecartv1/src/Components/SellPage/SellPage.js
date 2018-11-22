@@ -41,7 +41,7 @@ class SellPage extends Component {
                 </Card>
               </Col>
               </Row>
-        <Route path="/edit" component={SearchProduct} />
+        <Route path="/edit" component={EditAd} />
         <Route path="/newAd" component={NewAd} />
       </div>
       </Router>

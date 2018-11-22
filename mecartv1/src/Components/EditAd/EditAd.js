@@ -43,8 +43,16 @@ class EditAd extends Component{
     }
 
     render(){
-        return(
-            <div className="new">
+        return(<div className="new">
+
+     
+            <form onSubmit={this.handlesubmit1}>
+                <label for="search">Enter product ID</label>
+                <input type="number" id="search" name="search" />
+                <button type="submit">SEARCH!</button>
+              
+            </form>
+            
 
             <div className="formstyle">
 
