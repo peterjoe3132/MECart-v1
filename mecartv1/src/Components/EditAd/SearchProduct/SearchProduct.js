@@ -52,9 +52,9 @@ class SearchProduct extends Component{
                             <form onSubmit={this.handlesubmit}>
                                 <label for="search">Enter product ID</label>
                                 <input type="number" id="search" name="search" />
-                                <button type="submit">SEARCH!</button>
+                                <Link to="/editad"><button type="submit">SEARCH!</button></Link>
                                 hey there 
-                                <Link to="/editad"><button>Click to Edit!</button></Link>
+                                <button>Click to Edit!</button>
                                 <Route to="/editad" component={EditAd}/>
                             </form>
                            
