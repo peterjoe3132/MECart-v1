@@ -29,14 +29,11 @@ class BuyPage extends Component {
     }
     render() {
       return (<div className="Buy">
-        <div className="banner">Games</div>
       <header className="Buy-header">
       </header> 
-      <div className="grid-container">
       {this.state.data.map(el => (
              <Item itemdetails={el}/>
           ))}  
-  </div> 
     </div>
       );
     }
@@ -54,8 +51,14 @@ class BuyPage extends Component {
       return (
         <Router>
           <div style={{padding:'20px'}}>
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <Link to="/product"><div className="grid-item"><div> <img width="20%"  height="20% "src={this.imgsrc}/></div><br/><br/><div>Product Name:{this.productname}</div><b>Price:{this.price}</b></div></Link>    
+          <Link to="/product">
+            <div className="flex">
+              <div> <img width="200px"  height="200px "src={this.imgsrc}/></div>
+              <br/>
+              <div>{this.productname}</div>
+              <b>Price:{this.price}</b>
+            </div>
+          </Link>    
        <Route path="/product" component={Product} />
 
        </div>
