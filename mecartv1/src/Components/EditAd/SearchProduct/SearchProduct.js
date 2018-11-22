@@ -41,21 +41,19 @@ class SearchProduct extends Component{
     render(){
         var flag=1
             if(this.state.data[0]!=undefined){
-                flag=1;
+                flag=0;
             }
             else{
-                flag=2;
+                flag=1;
             }
         return(
-            <Router>
+            
                             <div class="search">
-                            <form onSubmit={this.handlesubmit}>
+                            <form onSubmit={this.handlesubmit1}>
                                 <label for="search">Enter product ID</label>
                                 <input type="number" id="search" name="search" />
-                                <Link to="/editad"><button type="submit">SEARCH!</button></Link>
-                                hey there 
-                                <button>Click to Edit!</button>
-                                <Route to="/editad" component={EditAd}/>
+                                <button type="submit">SEARCH!</button>
+                              
                             </form>
                            
 
@@ -67,7 +65,7 @@ class SearchProduct extends Component{
                    
                         </div>
 
-            </Router>
+        
            
         );
 
