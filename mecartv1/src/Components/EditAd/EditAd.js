@@ -5,9 +5,47 @@ class EditAd extends Component{
     constructor(){
         super();
         this.handlesubmit=this.handlesubmit.bind(this);
+        this.state={ data:[] }
+        this.state={ data1:[] }
         
     }
     
+    handlesubmit1(event){
+        event.preventDefault();
+        var data= new FormData(event.target);
+        var search=data.get('search')
+     
+
+        var body={
+            "product_id": search
+            
+        }
+        var requestOptions = {
+            "method": "POST",
+            "headers": {
+              "Content-Type":"application/json",
+              "Access-Control-Allow-Origin":"*",
+              'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
+            }
+          };
+        var requestOptions = {
+            "method": "POST",
+            "headers": {
+              "Content-Type":"application/json",
+              "Access-Control-Allow-Origin":"*",
+              'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
+            }
+          };
+          requestOptions["body"] = JSON.stringify(body);
+          console.log(requestOptions);
+        fetch("http://127.0.0.1:8080/edit",requestOptions)
+        .then(res => res.json())
+        .then(json => this.setState({ data:json }));
+        
+    
+    }
     handlesubmit(event){
         event.preventDefault();
         var data= new FormData(event.target);
@@ -39,10 +77,15 @@ class EditAd extends Component{
           };
           requestOptions["body"] = JSON.stringify(body);
           console.log(requestOptions);
-        var resp= fetch("http://127.0.0.1:8080/sellad",requestOptions);
+        fetch("http://127.0.0.1:8080/editad",requestOptions)
+        .then(res => res.json())
+        .then(json => this.setState({ data1:json }));
+        
+    
     }
 
     render(){
+        console.log(this.state.data[0]);
         return(<div className="new">
 
      
