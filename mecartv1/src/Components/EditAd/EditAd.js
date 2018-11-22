@@ -4,7 +4,7 @@ import './EditAd.css';
 class EditAd extends Component{
     constructor(){
         super();
-        this.handlesubmit=this.handlesubmit.bind(this);
+        this.handlesubmit1=this.handlesubmit1.bind(this);
         this.state={ data:[] }
         this.state={ data1:[] }
         
@@ -29,22 +29,12 @@ class EditAd extends Component{
               'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
             }
           };
-        var requestOptions = {
-            "method": "POST",
-            "headers": {
-              "Content-Type":"application/json",
-              "Access-Control-Allow-Origin":"*",
-              'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-              'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
-            }
-          };
           requestOptions["body"] = JSON.stringify(body);
           console.log(requestOptions);
         fetch("http://127.0.0.1:8080/edit",requestOptions)
         .then(res => res.json())
         .then(json => this.setState({ data:json }));
         
-    
     }
     handlesubmit(event){
         event.preventDefault();
@@ -85,7 +75,7 @@ class EditAd extends Component{
     }
 
     render(){
-        console.log(this.state.data[0]);
+        console.log(this.state.data)
         return(<div className="new">
 
      
