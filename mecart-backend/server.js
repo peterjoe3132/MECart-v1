@@ -44,7 +44,7 @@ app.post('/sellad',function(req, res){
       values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category[0].category_id,body1.adprice,body1.contname,body1.contnum]
     console.log(values)
     console.log(body1.category[0].category_id);
-  var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?,?,?)";
+  var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price,contname,contnum) VALUES(?,?,?,?,?,?,?)";
   connection.query(sql, values, function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
@@ -82,24 +82,25 @@ app.post('/edit',function(req, res){
 
     app.post('/editad',function(req, res){ 
       var body3= req.body;
-     values3=[body1.category];
+     values3=[body3.category];
       var sql1="SELECT category_id FROM category WHERE category_name=? ";
       connection.query(sql1, values3, function(err,result){
         if(err) throw err;
         body3.category=result;
         console.log(body3.category[0].category_id);
         console.log("read from the table");
-        values4=[body3.adtitle,body3.adesc,body3.adphoto,body3.category[0].category_id,body3.adprice,body3.contname,body3.contnum]
+        values4=[body3.adtitle,body3.adesc,body3.adphoto,body3.category[0].category_id,body3.adprice,body3.contname,body3.contnum,body3.product_id]
       console.log(values)
       console.log(body3.category[0].category_id);
-    var sql = "update product set product_name=?,product_desc=?,imgurl=?,category_id=?,price=? where product_id=?";
+    var sql = "update product set product_name=?,product_desc=?,imgurl=?,category_id=?,price=?,contname=?,contnum=? where product_id=?";
     connection.query(sql, values4, function (err, result) {
       if (err) throw err;
       console.log("Number of records inserted: " + result.affectedRows);
+      res.send(result)
     });
       })
   //connection.end()
-      res.send(result)
+      
   })
 
     app.use(express.static('public'));
