@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './EditAd.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import BuyPage from '../BuyPage/BuyPage'
-import '../BuyPage/BuyPage.css'
 
-class Newclass extends Component{
+class EditAd extends Component
+{
     constructor(props){
         super(props);
         this.handlesubmit=this.handlesubmit.bind(this);
@@ -13,6 +11,7 @@ class Newclass extends Component{
     handlesubmit(event){
         event.preventDefault();
         var data= new FormData(event.target);
+        var productid=data.get('ProductID')
         var adtitle=data.get('AdTitle')
         var category=data.get('Category')
         var adesc=data.get('AdDescription')
@@ -22,6 +21,7 @@ class Newclass extends Component{
         var contnum=data.get('ContactNum')
 
         var body={
+            "product_id":productid,
             "adtitle": adtitle,
             "category": category,
             "adesc":adesc,
@@ -43,7 +43,7 @@ class Newclass extends Component{
           console.log(requestOptions);
         fetch("http://127.0.0.1:8080/editad",requestOptions)
         .then(res => res.json())
-        .then(json => this.setState({ data1:json }));
+        .then(json => this.setState({ data:json }));
         
     
     }
@@ -56,9 +56,17 @@ class Newclass extends Component{
              {/* <img className="logo" src={logo} width="100" height="100"/> */}
              
             <form className="unit" onSubmit={this.handlesubmit} >
+                    <div>
+                        <label for="AdTitle">Product Id *</label><br/>
+                        <input type="Number" className="text" name="ProductID" id="ProductID"  placeholder="Enter the product ID here" required maxLength="25"/>
+                        <small id="ProductIDHelpBlock" class="form-text text-muted">
+                        Title should not exceed 25 characters
+                        </small> 
+
+                    </div>
                     <div className="form-group ">
                         <label for="AdTitle">Ad Title *</label><br/>
-                        <input type="text" className="text" name="AdTitle" id="AdTitle" defaultValue={this.defaultvalues} placeholder="Enter Title here" required maxLength="25"/>
+                        <input type="text" className="text" name="AdTitle" id="AdTitle"  placeholder="Enter Title here" required maxLength="25"/>
                         <small id="AdTitleHelpBlock" class="form-text text-muted">
                         Title should not exceed 25 characters
                         </small>                 
@@ -153,82 +161,4 @@ class Newclass extends Component{
         );
     }
 }
-class EditAd extends Component{
-    constructor(){
-        super();
-        this.handlesubmit1=this.handlesubmit1.bind(this);
-        this.state={ data:{ }}
-        
-        // this.defaultvalues=this.defaultvalues.bind(this);
-        
-    }
-    
-    handlesubmit1(event){
-        event.preventDefault();
-        var data= new FormData(event.target);
-        var search=data.get('search')
-     
-
-        var body={
-            "product_id": search
-            
-        }
-        var requestOptions = {
-            "method": "POST",
-            "headers": {
-              "Content-Type":"application/json",
-              "Access-Control-Allow-Origin":"*",
-              'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-              'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
-            }
-          };
-          requestOptions["body"] = JSON.stringify(body);
-          console.log(requestOptions);
-        fetch("http://127.0.0.1:8080/edit",requestOptions)
-        .then(res => res.json())
-        .then(json => this.setState({ data:json }));
-        
-        
-    }
-   
-    // deafaultvalues(e) {
-    //     if(this.state.data[0].product_name==undefined){
-    //         return("Enter value")
-    //     }
-    //     else
-    //     {
-    //         return (this.state.data[0].product_name)
-    //     }
-        
-    // }
-
-    render(){
-        console.log(this.state.data)
-        var flag=0;
-        return(
-        // <Router>
-             <div className="new">
-
-     
-            <form onSubmit={this.handlesubmit1}>
-                <label for="search">Enter product ID</label>
-                <input type="number" id="search" name="search" />
-             {/* <Link to="/ppp"> */}
-             <button type="submit">SEARCH!</button>
-             {/* </Link>  */}
-            {/* <Route path="/ppp" Component={Newclass} />  */}
-             
-            {/* { <Newclass /> } */}
-            </form>
-
-
-            </div>  
-
-        // </Router>
-       
-
-        );
-    }
-}
-
 export default EditAd
