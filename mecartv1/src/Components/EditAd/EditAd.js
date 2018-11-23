@@ -1,41 +1,14 @@
 import React, { Component } from 'react';
 import './EditAd.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import BuyPage from '../BuyPage/BuyPage'
+import '../BuyPage/BuyPage.css'
 
-class EditAd extends Component{
-    constructor(){
-        super();
-        this.handlesubmit1=this.handlesubmit1.bind(this);
-        this.state={ data:[{product_id:"ProductID","product_desc":"Product Description"}],data1:[] }
-        
-        this.defaultvalues=this.defaultvalues.bind(this);
-        
-    }
-    
-    handlesubmit1(event){
-        event.preventDefault();
-        var data= new FormData(event.target);
-        var search=data.get('search')
-     
-
-        var body={
-            "product_id": search
-            
-        }
-        var requestOptions = {
-            "method": "POST",
-            "headers": {
-              "Content-Type":"application/json",
-              "Access-Control-Allow-Origin":"*",
-              'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
-              'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
-            }
-          };
-          requestOptions["body"] = JSON.stringify(body);
-          console.log(requestOptions);
-        fetch("http://127.0.0.1:8080/edit",requestOptions)
-        .then(res => res.json())
-        .then(json => this.setState({ data:json }));
-        
+class Newclass extends Component{
+    constructor(props){
+        super(props);
+        this.handlesubmit=this.handlesubmit.bind(this);
+        this.state={data:{}}
     }
     handlesubmit(event){
         event.preventDefault();
@@ -74,29 +47,9 @@ class EditAd extends Component{
         
     
     }
-    deafaultvalues(e) {
-        if(this.state.data[0].product_name==undefined){
-            return("Enter value")
-        }
-        else
-        {
-            return (this.state.data[0].product_name)
-        }
-        
-    }
-
     render(){
-        console.log(this.state.data)
-        return(<div className="new">
-
-     
-            <form onSubmit={this.handlesubmit1}>
-                <label for="search">Enter product ID</label>
-                <input type="number" id="search" name="search" />
-                <button type="submit">SEARCH!</button>
-              
-            </form>
-            
+        return(
+            <div className="new">
 
             <div className="formstyle">
 
@@ -121,7 +74,7 @@ class EditAd extends Component{
                             
                                 </select>
                             </div>
-</div>
+                        </div>
                          <div className="form-group col">
                                 <label for="AdDescription">Ad Description*</label><br/>
                                 <textarea className="text" id="AdDescription" rows="3" name="AdDescription"   required maxLength="200"></textarea>
@@ -196,6 +149,83 @@ class EditAd extends Component{
               
 
             </div>
+
+        );
+    }
+}
+class EditAd extends Component{
+    constructor(){
+        super();
+        this.handlesubmit1=this.handlesubmit1.bind(this);
+        this.state={ data:{ }}
+        
+        // this.defaultvalues=this.defaultvalues.bind(this);
+        
+    }
+    
+    handlesubmit1(event){
+        event.preventDefault();
+        var data= new FormData(event.target);
+        var search=data.get('search')
+     
+
+        var body={
+            "product_id": search
+            
+        }
+        var requestOptions = {
+            "method": "POST",
+            "headers": {
+              "Content-Type":"application/json",
+              "Access-Control-Allow-Origin":"*",
+              'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept'
+            }
+          };
+          requestOptions["body"] = JSON.stringify(body);
+          console.log(requestOptions);
+        fetch("http://127.0.0.1:8080/edit",requestOptions)
+        .then(res => res.json())
+        .then(json => this.setState({ data:json }));
+        
+        
+    }
+   
+    // deafaultvalues(e) {
+    //     if(this.state.data[0].product_name==undefined){
+    //         return("Enter value")
+    //     }
+    //     else
+    //     {
+    //         return (this.state.data[0].product_name)
+    //     }
+        
+    // }
+
+    render(){
+        console.log(this.state.data)
+        var flag=0;
+        return(
+        // <Router>
+             <div className="new">
+
+     
+            <form onSubmit={this.handlesubmit1}>
+                <label for="search">Enter product ID</label>
+                <input type="number" id="search" name="search" />
+             {/* <Link to="/ppp"> */}
+             <button type="submit">SEARCH!</button>
+             {/* </Link>  */}
+            {/* <Route path="/ppp" Component={Newclass} />  */}
+             
+            {/* { <Newclass /> } */}
+            </form>
+
+
+            </div>  
+
+        // </Router>
+       
 
         );
     }
