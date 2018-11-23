@@ -34,17 +34,17 @@ connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
 
 app.post('/sellad',function(req, res){ 
     var body1= req.body;
-   [body1.category];
+   values1=[body1.category];
     var sql1="SELECT category_id FROM category WHERE category_name=? ";
     connection.query(sql1, values1, function(err,result){
       if(err) throw err;
       body1.category=result;
       console.log(body1.category[0].category_id);
       console.log("read from the table");
-      values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category[0].category_id,body1.adprice]
+      values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category[0].category_id,body1.adprice,body1.contname,body1.contnum]
     console.log(values)
     console.log(body1.category[0].category_id);
-  var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
+  var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?,?,?)";
   connection.query(sql, values, function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
@@ -80,26 +80,26 @@ app.post('/edit',function(req, res){
   //connection.end()
     })
 
-    app.post('/sellad',function(req, res){ 
-      var body1= req.body;
-     [body1.category];
+    app.post('/editad',function(req, res){ 
+      var body3= req.body;
+     values3=[body1.category];
       var sql1="SELECT category_id FROM category WHERE category_name=? ";
-      connection.query(sql1, values1, function(err,result){
+      connection.query(sql1, values3, function(err,result){
         if(err) throw err;
-        body1.category=result;
-        console.log(body1.category[0].category_id);
+        body3.category=result;
+        console.log(body3.category[0].category_id);
         console.log("read from the table");
-        values=[body1.adtitle,body1.adesc,body1.adphoto,body1.category[0].category_id,body1.adprice]
+        values4=[body3.adtitle,body3.adesc,body3.adphoto,body3.category[0].category_id,body3.adprice,body3.contname,body3.contnum]
       console.log(values)
-      console.log(body1.category[0].category_id);
-    var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?)";
-    connection.query(sql, values, function (err, result) {
+      console.log(body3.category[0].category_id);
+    var sql = "INSERT INTO product (product_name,product_desc,imgurl,category_id,price) VALUES(?,?,?,?,?,?,?)";
+    connection.query(sql, values4, function (err, result) {
       if (err) throw err;
       console.log("Number of records inserted: " + result.affectedRows);
     });
       })
   //connection.end()
-      res.send('Ad had been Posted')
+      res.send(result)
   })
 
     app.use(express.static('public'));
