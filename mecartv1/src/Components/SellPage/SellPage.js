@@ -20,10 +20,7 @@ class SellPage extends Component {
 
                     <CardTitle style={{fontSize:'3rem', padding:'20px'}}>Edit My Ad</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
-                    It is a long established fact that a reader will be distracted by the readable 
-                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
-                    has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
-                    content here', making it look like readable English.
+                    Already Posted an Ad but don't like how it looks? Then get editing.
                 </CardText>
                          <Link to="/edit"><Button id="buttonE" size="lg" block>Edit</Button></Link>
                 </Card>
@@ -32,10 +29,8 @@ class SellPage extends Component {
                 <Card body inverse style={{backgroundColor:'rgba(0,0,0,0.5)', padding:'18%', height:'100%',width:'100%',border:'none'}}>
                     <CardTitle style={{fontSize:'3rem', padding:'20px'}}>New Ad</CardTitle>
                     <CardText style={{ textAlign:'justify', textJustify:'inter-word', padding:'40px'}}>
-                    It is a long established fact that a reader will be distracted by the readable 
-                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it 
-                    has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
-                    content here', making it look like readable English.
+                    Planning on selling something? Post your Ad right here,       
+                     nowhere else.The button down here.
                 </CardText>
                          <Link to="/newAd"><Button id="buttonN" size="lg" block>New</Button></Link>
                 </Card>

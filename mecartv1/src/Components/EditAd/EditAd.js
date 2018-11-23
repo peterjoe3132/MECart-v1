@@ -47,6 +47,21 @@ class EditAd extends Component
         
     
     }
+    defaultvalues(e) {
+        console.log("heyyyy")
+        if(this.state.data[0].product_name==undefined){
+            console.log("hey");
+            return("Enter value")
+        }
+        else
+        {
+            console.log("hello");
+            return (this.state.data[0].product_name)
+           
+        }
+        
+    }
+
     render(){
         return(
             <div className="new">
@@ -54,7 +69,6 @@ class EditAd extends Component
             <div className="formstyle">
 
              {/* <img className="logo" src={logo} width="100" height="100"/> */}
-             
             <form className="unit" onSubmit={this.handlesubmit} >
                     <div>
                         <label for="AdTitle">Product Id *</label><br/>
