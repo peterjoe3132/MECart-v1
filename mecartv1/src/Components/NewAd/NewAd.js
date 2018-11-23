@@ -67,7 +67,7 @@ class NewAd extends Component{
                                 <option style={{color:'black'}}>Stationary</option>
                                 <option style={{color:'black'}}>books</option>
                                 <option style={{color:'black'}}>Electronics</option>
-                                {/* <option></option> */}
+                                <option style ={{color:'black'}}>Others</option>
                                 </select>
                             </div>
 </div>

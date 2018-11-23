@@ -5,8 +5,9 @@ class EditAd extends Component{
     constructor(){
         super();
         this.handlesubmit1=this.handlesubmit1.bind(this);
-        this.state={ data:[] }
-        this.state={ data1:[] }
+        this.state={ data:[{product_id:"ProductID","product_desc":"Product Description"}],data1:[] }
+        
+        this.defaultvalues=this.defaultvalues.bind(this);
         
     }
     
@@ -73,6 +74,16 @@ class EditAd extends Component{
         
     
     }
+    deafaultvalues(e) {
+        if(this.state.data[0].product_name==undefined){
+            return("Enter value")
+        }
+        else
+        {
+            return (this.state.data[0].product_name)
+        }
+        
+    }
 
     render(){
         console.log(this.state.data)
@@ -94,7 +105,7 @@ class EditAd extends Component{
             <form className="unit" onSubmit={this.handlesubmit} >
                     <div className="form-group ">
                         <label for="AdTitle">Ad Title *</label><br/>
-                        <input type="text" className="text" name="AdTitle" id="AdTitle" defaultValue={this.state.data[0].product_name} placeholder="Enter Title here" required maxLength="25"/>
+                        <input type="text" className="text" name="AdTitle" id="AdTitle" defaultValue={this.defaultvalues} placeholder="Enter Title here" required maxLength="25"/>
                         <small id="AdTitleHelpBlock" class="form-text text-muted">
                         Title should not exceed 25 characters
                         </small>                 
@@ -107,13 +118,13 @@ class EditAd extends Component{
                                 <option style={{color:'black'}}>Stationary</option>
                                 <option style={{color:'black'}}>Books</option>
                                 <option style={{color:'black'}}>Electronics</option>
-                                {/* <option></option> */}
+                            
                                 </select>
                             </div>
 </div>
                          <div className="form-group col">
                                 <label for="AdDescription">Ad Description*</label><br/>
-                                <textarea className="text" id="AdDescription" rows="3" name="AdDescription"  defaultValue={this.state.data[0].product_desc} required maxLength="200"></textarea>
+                                <textarea className="text" id="AdDescription" rows="3" name="AdDescription"   required maxLength="200"></textarea>
                                 <small id="passwordHelpBlock" classNameass="form-text text-muted">
                                 Should not exceed 200 words
                                 </small>
@@ -126,7 +137,7 @@ class EditAd extends Component{
 
                         <div className="form-group col">
                             <label for="AdPhotos">Upload Photos*</label><br/>
-                            <input type="text" className="text" id="AdPhotos" name="AdPhotos" defaultValue={this.state.data[0].imgurl} placeholder="Insert URL" required/>
+                            <input type="text" className="text" id="AdPhotos" name="AdPhotos"  placeholder="Insert URL" required/>
                             <small id="passwordHelpBlock" class="form-text text-muted">
                             Tip:Photos attract buyers
                             </small>
@@ -135,7 +146,7 @@ class EditAd extends Component{
 
                         <div className="form-group col">
                             <label for="AdPrice">Price *</label><br/>
-                            <input type="number" className="text" id="AdPrice" name="AdPrice" defaultValue={this.state.data[0].price} placeholder="Enter Price here" required />
+                            <input type="number" className="text" id="AdPrice" name="AdPrice"  placeholder="Enter Price here" required />
                                         
                         </div>
                     
