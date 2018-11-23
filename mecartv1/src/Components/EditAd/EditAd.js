@@ -163,10 +163,10 @@ class EditAd extends Component
                            
 
                    </div>
-
+                   <button className="buttonP" type="submit">Post Ad</button>
                 </form>
                     <br/><br/><br/>
-                 <button className="buttonP" type="submit">Post Ad</button>
+                 
             </div>
               
 
