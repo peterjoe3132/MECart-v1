@@ -90,9 +90,9 @@ app.post('/edit',function(req, res){
         console.log(body3.category[0].category_id);
         console.log("read from the table");
         values4=[body3.adtitle,body3.adesc,body3.adphoto,body3.category[0].category_id,body3.adprice,body3.contname,body3.contnum,body3.product_id]
-      console.log(values)
+      console.log(values4)
       console.log(body3.category[0].category_id);
-    var sql = "update product set product_name=?,product_desc=?,imgurl=?,category_id=?,price=?,contname=?,contnum=? where product_id=?";
+    var sql = "update product set product_name=?,product_desc=?,imgurl=?,category_id=?,price=?,contact_name=?,phone=? where product_id=?";
     connection.query(sql, values4, function (err, result) {
       if (err) throw err;
       console.log("Number of records inserted: " + result.affectedRows);

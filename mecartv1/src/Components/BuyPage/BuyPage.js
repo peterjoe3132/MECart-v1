@@ -46,6 +46,8 @@ class BuyPage extends Component {
       console.log(props);
       this.imgsrc=this.props.itemdetails.imgurl;
       this.price=this.props.itemdetails.price;
+      this.contname=this.props.itemdetails.contact_name
+      this.phone=this.props.itemdetails.phone
       }
     render() {
       return (
@@ -56,6 +58,8 @@ class BuyPage extends Component {
               <div> <img width="200px"  height="200px "src={this.imgsrc}/></div>
               <br/>
               <div>{this.productname}</div>
+              <div>Contact Name:{this.contname}</div>
+              <div>Contact Number:{this.phone}</div>
               <b>Price:{this.price}</b>
             </div>
           </Link>    
